@@ -181,7 +181,7 @@ function ThemeSettingsAside() {
           </div>
         </div> */}
       </div>
-      <div className="px-5 mt-5">
+      {/* <div className="px-5 mt-5">
         <Divider />
         <div className="mt-5 flex flex-row space-x-6">
           <div className="">
@@ -197,8 +197,8 @@ function ThemeSettingsAside() {
             </Link>
           </div>
         </div>
-      </div>
-      <div className="px-5 mt-2">
+      </div> */}
+      <div className="px-5 mt-5">
         <div className="flex flex-row space-x-10">
           <div>
             <h4 className="text-md font-medium">Title color</h4>

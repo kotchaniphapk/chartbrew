@@ -74,7 +74,6 @@ import useThemeDetector from "../../modules/useThemeDetector";
 import ReportSettings from "./components/ReportSettings";
 import ThemeSettingsAside from "./components/ThemeSettingsAside";
 
-
 const ResponsiveGridLayout = WidthProvider(Responsive, {
   measureBeforeMount: true,
 });
@@ -688,7 +687,8 @@ function PublicDashboard(props) {
             </div>
             <div className="h-screen py-4 overflow-y-auto bg-white border-l border-r w-96 z-[50] dark:bg-gray-800">
               <ReportSettings />
-              {/* <ThemeSettingsAside/> */}
+              {/* <ThemeSettingsAside
+              /> */}
             </div>
           </div>
         </aside>
@@ -839,48 +839,6 @@ function PublicDashboard(props) {
                     </a>
                   </div>
                 )}
-
-                <div className="flex flex-col">
-                  <span
-                    className="text-lg font-bold"
-                    style={{
-                      color:
-                        newChanges.titleColor ||
-                        project.titleColor ||
-                        "#000000",
-                    }}
-                  >
-                    {newChanges.dashboardTitle ||
-                      project.dashboardTitle ||
-                      project.name}
-                  </span>
-                  {!editorVisible && project.description && (
-                    <span
-                      className="dashboard-sub-title"
-                      style={{
-                        color:
-                          newChanges.titleColor ||
-                          project.titleColor ||
-                          "#000000",
-                      }}
-                    >
-                      {project.description}
-                    </span>
-                  )}
-                  {editorVisible && newChanges.description && (
-                    <span
-                      className="dashboard-sub-title"
-                      style={{
-                        color:
-                          newChanges.titleColor ||
-                          project.titleColor ||
-                          "#000000",
-                      }}
-                    >
-                      {newChanges.description}
-                    </span>
-                  )}
-                </div>
               </div>
             </NavbarBrand>
             <NavbarContent justify="end">
@@ -924,9 +882,49 @@ function PublicDashboard(props) {
               )}
             </NavbarContent>
           </Navbar>
+          <div className="px-10 bg-blue-800">
+            <div className="py-10 flex flex-col">
+              <h1
+                className="text-3xl font-bold"
+                style={{
+                  color:
+                    newChanges.titleColor || project.titleColor || "#000000",
+                }}
+              >
+                {newChanges.dashboardTitle ||
+                  project.dashboardTitle ||
+                  project.name}
+              </h1>
+
+              {!editorVisible && project.description && (
+                <div
+                  className="mt-2 dashboard-sub-title text-lg font-medium"
+                  style={{
+                    color:
+                      newChanges.titleColor || project.titleColor || "#000000",
+                  }}
+                >
+                  {project.description}
+                  <Button variant="flat" color="primary">Start Here</Button>
+                </div>
+              )}
+              {editorVisible && newChanges.description && (
+                <div
+                  className="mt-2 dashboard-sub-title text-lg font-medium max-w-md"
+                  style={{
+                    color:
+                      newChanges.titleColor || project.titleColor || "#000000",
+                  }}
+                >
+                  {newChanges.description}
+                  <Button variant="solid" color="primary" size="lg" className="mt-5">Start Here</Button>
+                </div>
+              )}
+            </div>
+          </div>
 
           {charts && charts.length > 0 && _isOnReport() && (
-            <div className="main-container relative p-2 pt-4 pb-10 md:pt-4 md:pb-10 md:pl-4 md:pr-4">
+            <div className="mt-5 main-container relative p-2 pt-4 pb-10 md:pt-4 md:pb-10 md:pl-4 md:pr-4">
               {loading && (
                 <Container style={styles.container}>
                   <Spacer y={4} />

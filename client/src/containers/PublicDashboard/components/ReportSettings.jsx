@@ -17,10 +17,10 @@ function ReportSettings() {
     <div>
       <h4 className="mt-1 px-5 text-lg font-semibold text-gray-800 dark:text-white">
         Report setting
-        <Divider className="mt-2 w-40 " />
+        <Divider className="mt-2" />
       </h4>
       <div className="mt-5">
-        <h4 className="px-5 text-md font-semibold text-gray-800">
+        <h4 className="px-5 text-md font-semibold text-gray-800 dark:text-white">
           Change Logo
         </h4>
         <div className="px-5 flex items-start justify-start mt-2 ">
@@ -40,7 +40,7 @@ function ReportSettings() {
           </Link>
         </div>
         <div className="px-5 mt-5">
-          <h4 className="text-md font-semibold text-gray-800">
+          <h4 className="text-md font-semibold text-gray-800  dark:text-white">
             Dashboard Title
           </h4>
           <div className="mt-2">
@@ -61,7 +61,7 @@ function ReportSettings() {
           </div>
         </div>
         <div className="px-5 mt-5">
-          <h4 className="text-md font-semibold text-gray-800">
+          <h4 className="text-md font-semibold text-gray-800  dark:text-white">
             Dashboard description
           </h4>
           <div className="mt-2">
@@ -83,10 +83,10 @@ function ReportSettings() {
         </div>
         <div className="px-5 mt-5">
           <div className="flex flex-row gap-4">
-            <h4 className="text-md font-semibold text-gray-800">
+            <h4 className="text-md font-semibold text-gray-800  dark:text-white">
               Company website URL
             </h4>
-            <Checkbox defaultSelected>Button</Checkbox>
+            {/* <Checkbox defaultSelected>Button</Checkbox> */}
           </div>
           <div className="mt-2">
             <Input
@@ -106,7 +106,7 @@ function ReportSettings() {
           </div>
         </div>
         <div className="px-5 mt-5">
-          <h4 className="text-md font-semibold text-gray-800">Custom Css</h4>
+          <h4 className="text-md font-semibold text-gray-800 dark:text-white">Custom Css</h4>
           <Text size={"sm"}>Some of the main classes on the page:</Text>
           <Row wrap="wrap" className={"gap-1 mt-2"}>
             <Chip>.main-container</Chip>
